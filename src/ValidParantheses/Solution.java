@@ -22,9 +22,4 @@ class Solution {
         }
         return stack.isEmpty();
     }
-
-    public static void main(String[] args) {
-       boolean result = isValid("()");
-        System.out.println(result);
-    }
 }

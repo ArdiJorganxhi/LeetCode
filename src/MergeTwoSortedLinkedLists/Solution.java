@@ -23,14 +23,4 @@ public class Solution {
         list1.next = mergeTwoLists(list1.next, list2);
         return list1;
     }
-
-    public static void main(String[] args) {
-        ListNode listNode = new ListNode();
-        listNode = new ListNode(1);
-        listNode.next = new ListNode(2);
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
-    }
 }
