@@ -43,15 +43,11 @@ public class Solution {
                 stack.peek().put(element, stack.peek().getOrDefault(element, 0) + count);
             }
         }
-
-        // The final map will contain the result
         atomCounts = stack.pop();
-
-        // Build the result formula string in the correct order
         StringBuilder formulaBuilder = new StringBuilder();
         atomCounts.entrySet()
                 .stream()
-                .sorted(Map.Entry.comparingByKey()) // Sort by element name for consistency
+                .sorted(Map.Entry.comparingByKey())
                 .forEach(entry -> {
                     formulaBuilder.append(entry.getKey());
                     if (entry.getValue() > 1) {
